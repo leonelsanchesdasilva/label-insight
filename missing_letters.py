@@ -1,3 +1,6 @@
 def getMissingLetters(phrase):
+    if not isinstance(phrase, str):
+        raise ValueError('Phrase parameter should be a string value.')
+
     letters = 'abcdefghijklmnopqrstuvwxyz'
-    print("".join([i for i in letters if i not in phrase]))
+    return "".join([i for i in letters if i not in phrase])
